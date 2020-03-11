@@ -24,7 +24,7 @@ class App extends Component {
         { name: "Harvin Virk", age: 24 }
       ]
     });
-  };
+   };
 
   nameChangedHandler = event => {
     this.State({
