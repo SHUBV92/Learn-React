@@ -29,12 +29,6 @@ class App extends Component {
     //const person = Object.assign({}, this.state.persons[personIndex])
 
     person.name = event.target.value;
-
-    console.log(
-      "App -> nameChangedHandler -> event.target.value ",
-      event.target.value
-    );
-
     const persons = [...this.state.persons];
     persons[personIndex] = person;
 
@@ -77,13 +71,15 @@ class App extends Component {
             clicked={this.deletePersonHandler}
             changed={this.nameChangedHandler} />;
       };
+      console.log(event)
   
 
     return (
       <div className={classes.App}>
-        <Cockpit showPersons={this.state.showPersons}
-          persons={this.state.persons}
-          clicked={this.togglePersonsHandler}
+        <Cockpit 
+          showPersons={this.state.showPersons}
+          persons={ this.state.persons }
+          clicked={ this.togglePersonsHandler } 
         /> 
         {person}
       </div>
